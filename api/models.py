@@ -1,3 +1,4 @@
+from random import choices
 from django.db import models
 
 # Create your models here.
@@ -8,6 +9,6 @@ class Company(models.Model):
                name = models.CharField( max_length=50)
                location = models.CharField(max_length = 50)
                about = models.TextField()
-               type = models.CharField(max_length = 100,choice = (("IT","it"),("Non it ","non it"),("Other","other"),))
+               type = models.CharField(max_length = 100,choices = (("IT","it"),("Non it ","non it"),("Other","other"),))
                added_data = models.BooleanField(default=True)
-               added_dateTime = models.DateField(auto_now=True)
+               active = models.DateField(auto_now=True)
