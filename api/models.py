@@ -14,7 +14,8 @@ class Company(models.Model):
                type = models.CharField(max_length = 100,choices = (("IT","it"),("Non it ","non it"),("Other","other"),))
                added_data = models.BooleanField(default=True)
                active = models.DateField(auto_now=True)
-
+               def __str__(self) -> str:
+                       return self.name
 
   # Creating Emplloyee model
                # if you give space this shit will give error 
